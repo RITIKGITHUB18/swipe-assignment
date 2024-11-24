@@ -1,0 +1,11 @@
+[1] create a virtual environment using the command
+
+o myenv\Scripts\activate
+o source myenv/bin/activate
+o uvicorn api:app --host 127.0.0.1 --port 8000 --reload
+
+[2] install the fast api for the setting up the connection between ai-model and backend of application 
+
+o pip install fastapi uvicorn transformers torch Pillow pytesseract
+
+
