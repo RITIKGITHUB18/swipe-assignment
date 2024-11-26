@@ -74,20 +74,29 @@ const Invoice = () => {
                   <TableCell>{invoice?.total_amount || 0}</TableCell>
                   <TableCell>{invoice?.date || "N/A"}</TableCell>
                   <TableCell>
-                    <IconButton
-                      onClick={() => handleEdit(invoice)}
-                      color="primary"
-                      aria-label="edit"
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: 1,
+                      }}
                     >
-                      <EditIcon />
-                    </IconButton>
-                    <IconButton
-                      onClick={() => handleDelete(invoice.invoice_id)}
-                      color="error"
-                      aria-label="delete"
-                    >
-                      <DeleteIcon />
-                    </IconButton>
+                      <IconButton
+                        onClick={() => handleEdit(invoice)}
+                        color="primary"
+                        aria-label="edit"
+                      >
+                        <EditIcon />
+                      </IconButton>
+                      <IconButton
+                        onClick={() => handleDelete(invoice.invoice_id)}
+                        color="error"
+                        aria-label="delete"
+                      >
+                        <DeleteIcon />
+                      </IconButton>
+                    </Box>
                   </TableCell>
                 </TableRow>
               ))

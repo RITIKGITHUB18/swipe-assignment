@@ -44,6 +44,7 @@ exports.processDocuments = async (uploadedFiles, res) => {
 
           const response = await axios.post(
             "http://127.0.0.1:8000/process-invoice",
+            // "http://0.0.0.0:10000/process-invoice",
             formData,
             {
               headers: formData.getHeaders(),
