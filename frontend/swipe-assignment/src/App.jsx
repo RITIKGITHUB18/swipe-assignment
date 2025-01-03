@@ -14,15 +14,15 @@ function App() {
   return (
     <>
       <Router>
-        <DashboardLayoutStruct>
-          <Routes>
+        <Routes>
+          <Route element={<DashboardLayoutStruct />}>
             <Route path="/" element={<Navigate to="/upload" replace />} />
             <Route path="/upload" element={<UploadInvoice />} />
             <Route path="/invoice" element={<Invoice />} />
             <Route path="/product" element={<Product />} />
             <Route path="/customer" element={<Customer />} />
-          </Routes>
-        </DashboardLayoutStruct>
+          </Route>
+        </Routes>
       </Router>
     </>
   );

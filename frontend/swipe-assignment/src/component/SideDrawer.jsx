@@ -1,4 +1,4 @@
-import { AppProvider } from "@toolpad/core/AppProvider";
+import { AppProvider } from "@toolpad/core/react-router-dom";
 import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 import { PageContainer } from "@toolpad/core/PageContainer";
 import swipeLogo from "../assets/swipeLogo.png";
@@ -47,11 +47,15 @@ export default function DashboardLayoutStruct({ children }) {
       theme={theme}
       branding={{
         logo: <img src={swipeLogo} alt="Swipe Logo" />,
-        title: "Swipe",
+        title: "Document Processing",
       }}
     >
-      <DashboardLayout>
-        <PageContainer>{children || <Outlet />}</PageContainer>
+      <DashboardLayout
+        slots={{
+          toolbarAccount: () => null,
+        }}
+      >
+        <Outlet />
       </DashboardLayout>
     </AppProvider>
   );
